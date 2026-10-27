@@ -1,0 +1,43 @@
+# 可执行文件
+*.exe
+
+# ========== Keil MDK5 全局规则（递归匹配所有example下工程） ==========
+# 编译输出目录，所有层级的Objects、Listings全部忽略
+**/Objects/
+**/Listings/
+
+# Keil本地用户缓存（窗口布局、断点、本地编译设置，绝对不要提交）
+*.uvoptx
+*.uvguix.*
+
+# Keil编译中间文件
+*.o
+*.d
+*.crf
+*.axf
+*.elf
+*.map
+*.lst
+*.lnp
+*.dep
+*.iex
+*.plg
+*.bak
+*.scvd
+*.build_log.htm
+
+# 兼容CubeMX生成的MDK-ARM结构（以后新增这种工程也自动生效）
+# **/MDK-ARM/*
+# !**/MDK-ARM/*.uvprojx
+# !**/MDK-ARM/*.sct
+# !**/MDK-ARM/startup_*.s
+
+# ========== IDE配置文件 ==========
+VSCode：全部忽略.vscode（如果你想共享c_cpp配置，注释掉这行）
+**/.vscode/
+**/workspace.code-workspace
+# Clion
+**/.idea/
+
+# ========== 可选：不想上传【资料文件】文件夹，取消下面注释 ==========
+资料文件/
