@@ -3,6 +3,8 @@
 int main(void)
 {
 	SYSCFG_DL_init();
+
+	DL_GPIO_setPins(LED_PORT, LED_GREEN_PIN);
 	
 	while(1)
 	{

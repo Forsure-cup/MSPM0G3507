@@ -68,12 +68,16 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
     DL_GPIO_initPeripheralAnalogFunction(GPIO_HFXIN_IOMUX);
     DL_GPIO_initPeripheralAnalogFunction(GPIO_HFXOUT_IOMUX);
 
-    DL_GPIO_initDigitalOutput(LED_WHITE_IOMUX);
-
     DL_GPIO_initDigitalInput(KEY_KEY1_IOMUX);
 
-    DL_GPIO_clearPins(GPIOA, LED_WHITE_PIN);
-    DL_GPIO_enableOutput(GPIOA, LED_WHITE_PIN);
+    DL_GPIO_initDigitalOutput(LED_WHITE_IOMUX);
+
+    DL_GPIO_initDigitalOutput(LED_GREEN_IOMUX);
+
+    DL_GPIO_clearPins(GPIOA, LED_WHITE_PIN |
+		LED_GREEN_PIN);
+    DL_GPIO_enableOutput(GPIOA, LED_WHITE_PIN |
+		LED_GREEN_PIN);
 
 }
 
