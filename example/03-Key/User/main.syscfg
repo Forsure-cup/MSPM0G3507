@@ -38,13 +38,9 @@ pinFunction4.HFXTStartup = 10;
 
 GPIO1.port                          = "PORTA";
 GPIO1.$name                         = "LED";
-GPIO1.associatedPins.create(2);
-GPIO1.associatedPins[0].assignedPin = "14";
-GPIO1.associatedPins[0].$name       = "GREEN";
-GPIO1.associatedPins[0].pin.$assign = "PA14";
-GPIO1.associatedPins[1].$name       = "WHITE";
-GPIO1.associatedPins[1].assignedPin = "0";
-GPIO1.associatedPins[1].pin.$assign = "PA0";
+GPIO1.associatedPins[0].$name       = "WHITE";
+GPIO1.associatedPins[0].assignedPin = "0";
+GPIO1.associatedPins[0].pin.$assign = "PA0";
 
 const Board = scripting.addModule("/ti/driverlib/Board", {}, false);
 

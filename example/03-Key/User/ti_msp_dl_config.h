@@ -82,21 +82,18 @@ extern "C" {
 
 
 
+/* Port definition for Pin Group LED */
+#define LED_PORT                                                         (GPIOA)
+
+/* Defines for WHITE: GPIOA.0 with pinCMx 1 on package pin 33 */
+#define LED_WHITE_PIN                                            (DL_GPIO_PIN_0)
+#define LED_WHITE_IOMUX                                           (IOMUX_PINCM1)
 /* Port definition for Pin Group KEY */
 #define KEY_PORT                                                         (GPIOA)
 
 /* Defines for KEY1: GPIOA.2 with pinCMx 7 on package pin 42 */
 #define KEY_KEY1_PIN                                             (DL_GPIO_PIN_2)
 #define KEY_KEY1_IOMUX                                            (IOMUX_PINCM7)
-/* Port definition for Pin Group LED */
-#define LED_PORT                                                         (GPIOA)
-
-/* Defines for GREEN: GPIOA.14 with pinCMx 36 on package pin 7 */
-#define LED_GREEN_PIN                                           (DL_GPIO_PIN_14)
-#define LED_GREEN_IOMUX                                          (IOMUX_PINCM36)
-/* Defines for WHITE: GPIOA.0 with pinCMx 1 on package pin 33 */
-#define LED_WHITE_PIN                                            (DL_GPIO_PIN_0)
-#define LED_WHITE_IOMUX                                           (IOMUX_PINCM1)
 
 /* clang-format on */
 
