@@ -10,6 +10,7 @@
  */
 const GPIO   = scripting.addModule("/ti/driverlib/GPIO", {}, false);
 const GPIO1  = GPIO.addInstance();
+const GPIO2  = GPIO.addInstance();
 const SYSCTL = scripting.addModule("/ti/driverlib/SYSCTL");
 
 /**
@@ -37,11 +38,23 @@ pinFunction4.HFXTStartup = 10;
 
 GPIO1.port                          = "PORTA";
 GPIO1.$name                         = "LED";
-GPIO1.associatedPins[0].assignedPin = "14";
-GPIO1.associatedPins[0].$name       = "GREEN";
-GPIO1.associatedPins[0].pin.$assign = "PA14";
+GPIO1.associatedPins.create(2);
+GPIO1.associatedPins[0].$name       = "WHITE";
+GPIO1.associatedPins[0].assignedPin = "0";
+GPIO1.associatedPins[0].pin.$assign = "PA0";
+GPIO1.associatedPins[1].$name       = "GREEN";
+GPIO1.associatedPins[1].assignedPin = "14";
+GPIO1.associatedPins[1].pin.$assign = "PA14";
 
 const Board = scripting.addModule("/ti/driverlib/Board", {}, false);
+
+GPIO2.$name                                 = "KEY";
+GPIO2.port                                  = "PORTA";
+GPIO2.associatedPins[0].$name               = "KEY1";
+GPIO2.associatedPins[0].direction           = "INPUT";
+GPIO2.associatedPins[0].assignedPortSegment = "Lower";
+GPIO2.associatedPins[0].assignedPin         = "2";
+GPIO2.associatedPins[0].pin.$assign         = "PA2";
 
 SYSCTL.forceDefaultClkConfig = true;
 SYSCTL.clockTreeEn           = true;

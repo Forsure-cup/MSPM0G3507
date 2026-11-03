@@ -690,14 +690,14 @@
           <GroupName>User</GroupName>
           <Files>
             <File>
-              <FileName>empty.syscfg</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\User\empty.syscfg</FilePath>
-            </File>
-            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\User\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.syscfg</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\User\main.syscfg</FilePath>
             </File>
             <File>
               <FileName>ti_msp_dl_config.c</FileName>
