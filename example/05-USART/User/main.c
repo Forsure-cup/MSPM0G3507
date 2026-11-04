@@ -47,12 +47,12 @@ int main(void)
 		{
 			if (uart_data == '1')
 			{
-				UART0_SendString("LED_ON\r\n");
+				UART0_SendString("LED_GREEN_ON\r\n");
 				DL_GPIO_setPins(LED_PORT, LED_GREEN_PIN);
 			}
 			else if (uart_data == '0')
 			{
-				UART0_SendString("LED_OFF\r\n");
+				UART0_SendString("LED_GREEN_OFF\r\n");
 				DL_GPIO_clearPins(LED_PORT, LED_GREEN_PIN);
 			}
 

@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>__MSPM0G3507__</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Source\third_party\CMSIS\Core\Include;..\..\Source;..\80MHzClock</IncludePath>
+              <IncludePath>..\..\Source\third_party\CMSIS\Core\Include;..\..\Source;..\01-ClockFast</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
